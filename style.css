@@ -62,7 +62,7 @@ body {
 }
 
 @media (min-height: 425px) {
-  /** Youtube logo by https://codepen.io/alvaromontoro */
+
   #youtube {
     z-index: 2;
     display: block;
