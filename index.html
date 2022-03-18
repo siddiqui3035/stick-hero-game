@@ -1,7 +1,51 @@
-<script type="text/javascript">
-    <!-- HTML Encryption provided by www.webtoolhub.com -->
-    <!--
-    document.write(unescape('%3c%21%44%4f%43%54%59%50%45%20%68%74%6d%6c%3e%0d%0a%3c%68%74%6d%6c%20%6c%61%6e%67%3d%22%65%6e%22%3e%0d%0a%3c%68%65%61%64%3e%0d%0a%20%20%20%20%3c%6d%65%74%61%20%63%68%61%72%73%65%74%3d%22%55%54%46%2d%38%22%3e%0d%0a%20%20%20%20%3c%6d%65%74%61%20%68%74%74%70%2d%65%71%75%69%76%3d%22%58%2d%55%41%2d%43%6f%6d%70%61%74%69%62%6c%65%22%20%63%6f%6e%74%65%6e%74%3d%22%49%45%3d%65%64%67%65%22%3e%0d%0a%20%20%20%20%3c%6d%65%74%61%20%6e%61%6d%65%3d%22%76%69%65%77%70%6f%72%74%22%20%63%6f%6e%74%65%6e%74%3d%22%77%69%64%74%68%3d%64%65%76%69%63%65%2d%77%69%64%74%68%2c%20%69%6e%69%74%69%61%6c%2d%73%63%61%6c%65%3d%31%2e%30%22%3e%0d%0a%20%20%20%20%3c%6c%69%6e%6b%20%72%65%6c%3d%22%73%74%79%6c%65%73%68%65%65%74%22%20%68%72%65%66%3d%22%73%74%79%6c%65%2e%63%73%73%22%3e%0d%0a%20%20%20%20%3c%6c%69%6e%6b%20%72%65%6c%3d%22%69%63%6f%6e%22%20%74%79%70%65%3d%22%69%6d%61%67%65%2f%78%2d%69%63%6f%6e%22%20%68%72%65%66%3d%22%6c%6f%67%6f%2e%6a%70%67%22%3e%0d%0a%20%20%20%20%3c%74%69%74%6c%65%3e%53%74%69%63%6b%20%48%65%72%6f%20%42%79%20%53%75%6e%6e%79%3c%2f%74%69%74%6c%65%3e%0d%0a%3c%2f%68%65%61%64%3e%0d%0a%3c%62%6f%64%79%3e%0d%0a%20%20%20%20%3c%64%69%76%20%63%6c%61%73%73%3d%22%63%6f%6e%74%61%69%6e%65%72%22%3e%0d%0a%20%20%20%20%20%20%20%20%3c%64%69%76%20%69%64%3d%22%73%63%6f%72%65%22%3e%3c%2f%64%69%76%3e%0d%0a%20%20%20%20%20%20%20%20%3c%63%61%6e%76%61%73%20%69%64%3d%22%67%61%6d%65%22%20%77%69%64%74%68%3d%22%33%37%35%22%20%68%65%69%67%68%74%3d%22%33%37%35%22%3e%3c%2f%63%61%6e%76%61%73%3e%0d%0a%20%20%20%20%20%20%20%20%3c%64%69%76%20%69%64%3d%22%69%6e%74%72%6f%64%75%63%74%69%6f%6e%22%3e%48%6f%6c%64%20%64%6f%77%6e%20%74%68%65%20%6d%6f%75%73%65%20%74%6f%20%73%74%72%65%74%63%68%20%6f%75%74%20%61%20%73%74%69%63%6b%3c%2f%64%69%76%3e%0d%0a%20%20%20%20%20%20%20%20%3c%64%69%76%20%69%64%3d%22%70%65%72%66%65%63%74%22%3e%44%4f%55%42%4c%45%20%53%43%4f%52%45%3c%2f%64%69%76%3e%0d%0a%20%20%20%20%20%20%20%20%3c%62%75%74%74%6f%6e%20%69%64%3d%22%72%65%73%74%61%72%74%22%3e%52%45%53%54%41%52%54%3c%2f%62%75%74%74%6f%6e%3e%0d%0a%20%20%20%20%20%20%3c%2f%64%69%76%3e%0d%0a%20%20%20%20%3c%73%63%72%69%70%74%20%73%72%63%3d%22%73%63%72%69%70%74%2e%6a%73%22%3e%3c%2f%73%63%72%69%70%74%3e%0d%0a%3c%2f%62%6f%64%79%3e%0d%0a%3c%2f%68%74%6d%6c%3e'));
-    //-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    <title>Stick Hero By Sunny</title>
+    <script type='text/javascript'>
+        var isCtrl = false;
+        document.onkeyup=function(e)
+        {
+            if(e.which == 17)
+            isCtrl=false;
+        }
+        document.onkeydown=function(e)
+        {
+            if(e.which == 17)
+            isCtrl=true;
+            if((e.which == 85) || (e.which == 80) || (e.which == 123) || (e.which == 67) && (isCtrl == true))
+            {
+                return false;
+            }
+        }
+        var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+        if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+        function mischandler(){
+            return false;
+        }
+        function mousehandler(e){
+            var myevent = (isNS) ? e : event;
+            var eventbutton = (isNS) ? myevent.which : myevent.button;
+            if((eventbutton==2)||(eventbutton==3)) return false;
+        }
+        document.oncontextmenu = mischandler;
+        document.onmousedown = mousehandler;
+        document.onmouseup = mousehandler;
 </script>
-    
+</head>
+<body oncontextmenu="return false;">
+    <div class="container">
+        <div id="score"></div>
+        <canvas id="game" width="375" height="375"></canvas>
+        <div id="introduction">Hold down the mouse to stretch out a stick</div>
+        <div id="perfect">DOUBLE SCORE</div>
+        <button id="restart">RESTART</button>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>
