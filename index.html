@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="logo.jpg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="logo.jpg" />
     <title>Stick Hero By Sunny</title>
-    <script type='text/javascript'>
-        var isCtrl = false;
-        document.onkeyup=function(e){if(e.which == 17)isCtrl=false;}
-        document.onkeydown=function(e){
-            if(e.which == 17)isCtrl=true;
-            if((e.which == 85) || (e.which == 80) || (e.which == 123) || (e.which == 67) && (isCtrl == true)){return false;}
+    <script type="text/javascript">
+      var isCtrl = false;
+      document.onkeyup = function (e) {
+        if (e.which == 17) isCtrl = false;
+      };
+      document.onkeydown = function (e) {
+        if (e.which == 17) isCtrl = true;
+        if (
+          e.which == 85 ||
+          e.which == 80 ||
+          e.which == 123 ||
+          (e.which == 67 && isCtrl == true)
+        ) {
+          return false;
         }
-        var isNS = (navigator.appName == "Netscape") ? 1 : 0;
-        if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
-        function mischandler(){return false;}
-        function mousehandler(e){
-            var myevent = (isNS) ? e : event;
-            var eventbutton = (isNS) ? myevent.which : myevent.button;
-            if((eventbutton==2)||(eventbutton==3)) return false;
-        }
-        document.oncontextmenu = mischandler;
-        document.onmousedown = mousehandler;
-        document.onmouseup = mousehandler;
+      };
+      var isNS = navigator.appName == "Netscape" ? 1 : 0;
+      if (navigator.appName == "Netscape")
+        document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
+      function mischandler() {
+        return false;
+      }
+      function mousehandler(e) {
+        var myevent = isNS ? e : event;
+        var eventbutton = isNS ? myevent.which : myevent.button;
+        if (eventbutton == 2 || eventbutton == 3) return false;
+      }
+      document.oncontextmenu = mischandler;
+      document.onmousedown = mousehandler;
+      document.onmouseup = mousehandler;
     </script>
-</head>
-<body oncontextmenu="return false;">
+  </head>
+  <body oncontextmenu="return false;">
     <div class="container">
-        <div id="level">LEVEL <span id="levelNum">1</span></div>
-        <div id="score"></div>
-        <canvas id="game" width="375" height="375"></canvas>
-        <div id="introduction">Hold down the mouse to stretch out a stick</div>
-        <div id="perfect">DOUBLE SCORE</div>
-        <div id="levelComplete">LEVEL COMPLETE!<br>Target Reached</div>
-        <button id="restart">RESTART</button>
+      <div id="level">LEVEL <span id="levelNum">1</span></div>
+      <div id="target">TARGET: <span id="targetNum">8</span></div>
+      <div id="score"></div>
+      <canvas id="game" width="375" height="375"></canvas>
+      <div id="introduction">Hold down the mouse to stretch out a stick</div>
+      <div id="perfect">DOUBLE SCORE</div>
+      <div id="levelComplete">LEVEL COMPLETE!<br />Target Reached</div>
+      <button id="restart">RESTART</button>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
