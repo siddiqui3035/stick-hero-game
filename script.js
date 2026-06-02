@@ -13,16 +13,14 @@ function drawSticks(){
         ctx.translate(stick.x, canvasHeight - platformHeight);
         ctx.rotate(stick.rotation * Math.PI / 180);
         
-        // Color per level
         if(currentLevel === 1) ctx.strokeStyle = '#1f1f1f';
         else if(currentLevel === 2) ctx.strokeStyle = '#ffeb3b';
         else if(currentLevel === 3) ctx.strokeStyle = '#00f0ff';
         else ctx.strokeStyle = '#e0e0e0';
         
-        ctx.lineWidth = 1.5;        // ← Even thinner now
+        ctx.lineWidth = 1.5;
         ctx.lineCap = 'round';
         
-        // Light shadow for visibility
         ctx.shadowBlur = (currentLevel >= 4) ? 10 : 2;
         ctx.shadowColor = (currentLevel >= 4) ? '#a5d6ff' : 'rgba(0,0,0,0.5)';
         
@@ -129,7 +127,7 @@ const bgMusic = document.getElementById('bgMusic');
 
 const surahList = {
     1: "https://server8.mp3quran.net/afs/001.mp3",   // ফাতিহা
-    2: "https://ayatulkursi.org/wp-content/uploads/2026/04/Ayatul-Kursi-Full-Beautiful-Recitation.mp3",   
+    2: "https://ayatulkursi.org/wp-content/uploads/2026/04/Ayatul-Kursi-Full-Beautiful-Recitation.mp3",   // আয়াতুল কুরসী
     3: "https://server8.mp3quran.net/afs/113.mp3",   // ফালাক
     4: "https://server8.mp3quran.net/afs/114.mp3",   // নাস
     5: "https://server8.mp3quran.net/afs/112.mp3",   // ইখলাস
@@ -159,7 +157,7 @@ function playLevelMusic(level) {
 const originalReset = resetGame;
 resetGame = function() {
     originalReset();
-    setTimeout(() => playLevelMusic(currentLevel), 100); // ছোট ডিলে দেয়া হয়েছে
+    setTimeout(() => playLevelMusic(currentLevel), 100);
 };
 
 // Level Complete এ মিউজিক চেঞ্জ
@@ -176,3 +174,28 @@ checkLevelComplete = function() {
         }, 1800);
     }
 };
+
+// ==================== MOBILE TOUCH SUPPORT ====================
+const canvasElement = document.getElementById('game');
+
+function handleTouchStart(e) {
+    e.preventDefault();
+    if (phase === 'waiting') {
+        lastTimestamp = undefined;
+        introductionElement.style.opacity = 0;
+        phase = 'stretching';
+        window.requestAnimationFrame(animate);
+    }
+}
+
+function handleTouchEnd(e) {
+    e.preventDefault();
+    if (phase === 'stretching') {
+        phase = 'turning';
+    }
+}
+
+// Add Touch Events
+canvasElement.addEventListener('touchstart', handleTouchStart, { passive: false });
+canvasElement.addEventListener('touchend', handleTouchEnd, { passive: false });
+canvasElement.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
