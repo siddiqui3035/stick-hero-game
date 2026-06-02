@@ -1,11 +1,13 @@
 html, body {
   height: 100%;
   margin: 0;
+  overflow: hidden;
 }
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   cursor: pointer;
+  touch-action: none; /* Better touch experience */
 }
 
 .container {
@@ -14,39 +16,56 @@ body {
   align-items: center;
   height: 100%;
   position: relative;
+  background: #000;
 }
 
-#score, #level {
+#score, #level, #target {
   position: absolute;
-  top: 25px;
-  font-size: 1.9em;
+  top: 15px;
+  font-size: 1.6em;
   font-weight: 900;
   color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
   z-index: 10;
 }
 
-#level { left: 30px; }
-#score { right: 30px; }
+#level { left: 15px; }
+#score { right: 15px; }
+
+#target {
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  color: #ffd700;
+  white-space: nowrap;
+}
 
 #introduction {
-  width: 200px;
-  height: 150px;
+  width: 220px;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-weight: 600;
-  font-size: 0.8em;
+  font-size: 1em;
   text-align: center;
   transition: opacity 2s;
   color: white;
+  z-index: 10;
 }
 
 #perfect {
   position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 2s;
+  transition: opacity 1s;
   color: #f1c40f;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: bold;
+  z-index: 15;
 }
 
 #levelComplete {
@@ -67,28 +86,36 @@ body {
 }
 
 #restart {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   color: white;
   background-color: red;
   border: none;
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.1em;
   display: none;
   cursor: pointer;
   z-index: 15;
 }
 
-#target {
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.6em;
-  font-weight: 900;
-  color: #ffd700;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-  z-index: 10;
+/* Mobile Optimization */
+@media (max-width: 480px) {
+  #level, #target, #score {
+    font-size: 1.4em;
+    top: 12px;
+  }
+  
+  #target {
+    font-size: 1.35em;
+  }
+  
+  #introduction {
+    font-size: 0.95em;
+    width: 200px;
+  }
 }
