@@ -122,8 +122,9 @@ function drawStarsAndGalaxy(){
 
 function drawPlatforms(){platforms['forEach'](({x:_0x2470c3,w:_0x77636})=>{const _0x1d6050=_0x4de2;ctx[_0x1d6050(0x14a)]=_0x1d6050(0x168),ctx[_0x1d6050(0x153)](_0x2470c3,canvasHeight-platformHeight,_0x77636,platformHeight+(window['innerHeight']-canvasHeight)/0x2),sticks['last']()['x']<_0x2470c3&&(ctx[_0x1d6050(0x14a)]=_0x1d6050(0x149),ctx[_0x1d6050(0x153)](_0x2470c3+_0x77636/0x2-perfectAreaSize/0x2,canvasHeight-platformHeight,perfectAreaSize,perfectAreaSize));});}function drawHero(){const _0x460d53=_0x56fb3e;ctx[_0x460d53(0x155)](),ctx['fillStyle']=_0x460d53(0x168),ctx['translate'](heroX-heroWidth/0x2,heroY+canvasHeight-platformHeight-heroHeight/0x2),drawRoundedRect(-heroWidth/0x2,-heroHeight/0x2,heroWidth,heroHeight-0x4,0x5);const _0x31d02b=0x5;ctx[_0x460d53(0x158)](),ctx[_0x460d53(0x152)](_0x31d02b,11.5,0x3,0x0,Math['PI']*0x2,![]),ctx['fill'](),ctx[_0x460d53(0x158)](),ctx[_0x460d53(0x152)](-_0x31d02b,11.5,0x3,0x0,Math['PI']*0x2,![]),ctx[_0x460d53(0x150)](),ctx[_0x460d53(0x158)](),ctx['fillStyle']=_0x460d53(0x189),ctx[_0x460d53(0x152)](0x5,-0x7,0x3,0x0,Math['PI']*0x2,![]),ctx[_0x460d53(0x150)](),ctx[_0x460d53(0x14a)]=_0x460d53(0x149),ctx['fillRect'](-heroWidth/0x2-0x1,-0xc,heroWidth+0x2,4.5),ctx[_0x460d53(0x158)](),ctx[_0x460d53(0x173)](-0x9,-14.5),ctx[_0x460d53(0x159)](-0x11,-18.5),ctx['lineTo'](-0xe,-8.5),ctx[_0x460d53(0x150)](),ctx[_0x460d53(0x158)](),ctx[_0x460d53(0x173)](-0xa,-10.5),ctx[_0x460d53(0x159)](-0xf,-3.5),ctx[_0x460d53(0x159)](-0x5,-0x7),ctx['fill'](),ctx[_0x460d53(0x15d)]();}function drawRoundedRect(_0x5d515c,_0x3da134,_0x59f095,_0x3a3d16,_0x1520c2){const _0x229657=_0x56fb3e;ctx[_0x229657(0x158)](),ctx['moveTo'](_0x5d515c,_0x3da134+_0x1520c2),ctx['lineTo'](_0x5d515c,_0x3da134+_0x3a3d16-_0x1520c2),ctx[_0x229657(0x16a)](_0x5d515c,_0x3da134+_0x3a3d16,_0x5d515c+_0x1520c2,_0x3da134+_0x3a3d16,_0x1520c2),ctx['lineTo'](_0x5d515c+_0x59f095-_0x1520c2,_0x3da134+_0x3a3d16),ctx[_0x229657(0x16a)](_0x5d515c+_0x59f095,_0x3da134+_0x3a3d16,_0x5d515c+_0x59f095,_0x3da134+_0x3a3d16-_0x1520c2,_0x1520c2),ctx[_0x229657(0x159)](_0x5d515c+_0x59f095,_0x3da134+_0x1520c2),ctx['arcTo'](_0x5d515c+_0x59f095,_0x3da134,_0x5d515c+_0x59f095-_0x1520c2,_0x3da134,_0x1520c2),ctx[_0x229657(0x159)](_0x5d515c+_0x1520c2,_0x3da134),ctx[_0x229657(0x16a)](_0x5d515c,_0x3da134,_0x5d515c,_0x3da134+_0x1520c2,_0x1520c2),ctx[_0x229657(0x150)]();}function drawTree(_0x5c7de1,_0x5a4d6c){const _0x20a719=_0x56fb3e;ctx[_0x20a719(0x155)](),ctx[_0x20a719(0x15f)]((-sceneOffset*backgroundSpeedMultiplier+_0x5c7de1)*hill1Stretch,getTreeY(_0x5c7de1,hill1BaseHeight,hill1Amplitude));const _0x12b52b=0x5,_0x12ab39=0x2,_0x128c74=0x19,_0x27dcda=0xa;ctx[_0x20a719(0x14a)]=_0x20a719(0x13e),ctx['fillRect'](-_0x12ab39/0x2,-_0x12b52b,_0x12ab39,_0x12b52b),ctx[_0x20a719(0x158)](),ctx['moveTo'](-_0x27dcda/0x2,-_0x12b52b),ctx[_0x20a719(0x159)](0x0,-(_0x12b52b+_0x128c74)),ctx[_0x20a719(0x159)](_0x27dcda/0x2,-_0x12b52b),ctx['fillStyle']=_0x5a4d6c,ctx[_0x20a719(0x150)](),ctx[_0x20a719(0x15d)]();}function getHillY(_0x4d2875,_0x1edd2d,_0x323dbe,_0x1c441d){const _0x380089=_0x56fb3e,_0x3b71da=window['innerHeight']-_0x1edd2d;return Math[_0x380089(0x163)]((sceneOffset*backgroundSpeedMultiplier+_0x4d2875)*_0x1c441d)*_0x323dbe+_0x3b71da;}function getTreeY(_0x5d8a8b,_0x2bf55f,_0x588583){const _0x2cb960=_0x56fb3e,_0x1893c0=window['innerHeight']-_0x2bf55f;return Math[_0x2cb960(0x163)](_0x5d8a8b)*_0x588583+_0x1893c0;}function _0x4f26(){const _0x566214=['sinus','26901LCxxwL','128jFjSMH','innerWidth','resize','black','mouseup','arcTo','find','last','none','introduction','game','keydown','block','key','moveTo','innerText','stroke','#6D8821','addColorStop','707165xpVrYR','display','getElementById','Stick\x20is\x20','score','style','requestAnimationFrame','transitioning','addEventListener','534qJXmHp','height','opacity','click','length','lineWidth','875670lKIimM','#659F1C','white','Wrong\x20phase','prototype','#FEF1E1','#7D833C','3IXhWZV','restart','clearRect','52335eOPdgk','#BBD691','random','walking','preventDefault','stretching','8550470yRoFxW','red','fillStyle','getContext','innerHeight','3888740PEupvE','#95C629','createLinearGradient','fill','turning','arc','fillRect','width','save','#8FAC34','535731aUmFKq','beginPath','lineTo','rotate','falling','perfect','restore','floor','translate','rotation','push','waiting'];_0x4f26=function(){return _0x566214;};return _0x4f26();}
 
-// === IMPROVED BACKGROUND MUSIC SYSTEM ===
+// === BACKGROUND MUSIC SYSTEM (PC + Mobile Compatible) ===
 const bgMusic = document.getElementById('bgMusic');
+let musicStarted = false;
 
 const surahList = {
     1: "https://server8.mp3quran.net/afs/001.mp3",   // ফাতিহা
@@ -146,21 +147,35 @@ function playLevelMusic(level) {
     if (bgMusic.src !== url) {
         bgMusic.src = url;
         bgMusic.volume = 0.6;
-        
-        bgMusic.play().catch(err => {
-            console.log("Music play prevented by browser:", err);
-        });
+        bgMusic.loop = true;
+    }
+    
+    bgMusic.play().catch(err => {
+        console.log("Music play prevented by browser, waiting for interaction...");
+        musicStarted = false;
+    });
+}
+
+// Start music on first user interaction (for mobile + some strict browsers)
+function startMusicOnInteraction() {
+    if (!musicStarted) {
+        musicStarted = true;
+        playLevelMusic(currentLevel);
     }
 }
 
-// Reset Game এ মিউজিক চালু
+// Reset Game
 const originalReset = resetGame;
 resetGame = function() {
     originalReset();
-    setTimeout(() => playLevelMusic(currentLevel), 100);
+    setTimeout(() => {
+        if (musicStarted) {
+            playLevelMusic(currentLevel);
+        }
+    }, 150);
 };
 
-// Level Complete এ মিউজিক চেঞ্জ
+// Level Complete
 const originalCheck = checkLevelComplete;
 checkLevelComplete = function() {
     if (score >= targetScore) {
@@ -170,7 +185,7 @@ checkLevelComplete = function() {
             currentLevel++;
             targetScore += 6;
             resetGame();
-            playLevelMusic(currentLevel);
+            if (musicStarted) playLevelMusic(currentLevel);
         }, 1800);
     }
 };
@@ -180,6 +195,8 @@ const canvasElement = document.getElementById('game');
 
 function handleTouchStart(e) {
     e.preventDefault();
+    startMusicOnInteraction();   // Start music on first tap
+
     if (phase === 'waiting') {
         lastTimestamp = undefined;
         introductionElement.style.opacity = 0;
@@ -195,7 +212,12 @@ function handleTouchEnd(e) {
     }
 }
 
-// Add Touch Events
+// Mouse Support (PC)
+window.addEventListener('mousedown', function() {
+    startMusicOnInteraction();
+}, { once: true });
+
+// Touch Events
 canvasElement.addEventListener('touchstart', handleTouchStart, { passive: false });
 canvasElement.addEventListener('touchend', handleTouchEnd, { passive: false });
 canvasElement.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
